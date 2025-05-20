@@ -5,6 +5,8 @@ export default function GenerateAI() {
 
   const showNotification = useAppStore(state => state.showNotification)
   const generateRecipe = useAppStore(state => state.generateRecipe)
+  const recipe = useAppStore(state => state.recipe)
+  const isGenerating = useAppStore(state => state.isGenerating)
   
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -42,7 +44,8 @@ export default function GenerateAI() {
             <button 
               type="submit" 
               aria-label="Enviar"
-              className={`cursor-pointer absolute top-1/2 right-5 transform -translate-x-1/2 -translate-y-1/2`}
+              className={`cursor-pointer absolute top-1/2 right-5 transform -translate-x-1/2 -translate-y-1/2 ${isGenerating ? 'cursor-not-allowed opacity-50': ''}`}
+              disabled={isGenerating}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                 stroke="currentColor" className="w-10 h-10">
@@ -52,9 +55,9 @@ export default function GenerateAI() {
             </button>
           </div>
         </form>
-
+        {isGenerating && <p className="text-center animate-blink">Generando...</p>}
         <div className="py-10 whitespace-pre-wrap">
-
+            {recipe}
         </div>
       </div>
 
