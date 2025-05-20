@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+## 🍹 Buscador de Bebidas  
+A cocktail recipe search app built with React + TypeScript + Vite.  
+It uses Zustand for global state management, Zod for form validation, and fetches data from TheCocktailDB API to display drink details and ingredients in a dynamic modal interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Features  
+🔍 Search drinks by ingredient and category.  
+🤖 AI-powered drink suggestions using OpenRouter (ChatGPT API).  
+📄 Validates form input with Zod.  
+📊 Displays drink name, image, instructions, and ingredients list.  
+💬 Interactive modal to show drink details.  
+❤️ Add or remove drinks from favorites (stored in localStorage).  
+📱 Responsive design with clean UI using Tailwind CSS.  
+🧠 Global state management with Zustand.  
+📦 Data fetched from TheCocktailDB API.
 
-Currently, two official plugins are available:
+## 🧱 Tech Stack  
+⚛️ React  
+⌨️ TypeScript  
+⚡ Vite  
+💨 Tailwind CSS  
+🛡 Zod  
+🧠 Zustand  
+🧠 OpenRouter (AI integration)  
+🔌 TheCocktailDB API  
+💾 localStorage  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📦 Installation  
+Clone the repository and run the following commands:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/Germanilu/buscador-bebidas.git  
+cd buscador-bebidas  
+npm install  
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Luciano Germani
