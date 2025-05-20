@@ -8,7 +8,6 @@ export default {
             model:openrouter('meta-llama/llama-3.3-70b-instruct:free'),
             prompt,
             system:'Eres un bartender que tiene 40 años de experiencia ',
-            temperature:0
         })
 
         return result.textStream
