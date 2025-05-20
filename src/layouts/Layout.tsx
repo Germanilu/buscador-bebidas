@@ -1,8 +1,17 @@
 import { Outlet } from 'react-router-dom'
-
+import { useEffect } from 'react'
+import { useAppStore } from '../stores/useAppStore'
 import Header from "../components/Header"
 import Modal from '../components/Modal'
+import Notification from '../components/Notification'
 export default function Layout() {
+  
+  const loadFromStorage = useAppStore((state) => state.loadFromStorage)
+  const notification = useAppStore((state) => state.notification)
+
+  useEffect(() => {
+    loadFromStorage()
+  },[])
   return (
     <>
         <Header/>
@@ -10,6 +19,8 @@ export default function Layout() {
             <Outlet/>
         </main>
         <Modal/>
+        <Notification
+        />
     </>
   )
 }
