@@ -1,0 +1,14 @@
+import type {StateCreator} from 'zustand'
+
+export type AISlice = {
+    recipe: string
+    generateRecipe: (prompt: string) => Promise<void>
+}
+
+export const createAISlice: StateCreator<AISlice, [], []> = () => ({
+    recipe: '',
+    generateRecipe: async(prompt) => {
+
+        console.log(prompt)
+    }
+})
